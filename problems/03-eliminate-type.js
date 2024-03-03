@@ -51,9 +51,18 @@ Hint: Remember Polya's problem solving framework!
 ***********************************************************************/
 
 function eliminateType(arr) {
-  // Your code here 
+  return function (nonType) {
+    let answer = [];
+    for(let i =0; i< arr.length; i++){
+      let elements = arr[i];
+      let type = typeof(elements);
+      if(type !== nonType){
+        answer.push(elements);
+      }
+    }
+  return answer;
 }
-
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = eliminateType;
